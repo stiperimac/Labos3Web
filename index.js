@@ -205,7 +205,7 @@ function displayElapsedTime(elapsedTime) {
     const milliseconds = Math.floor(elapsedTime % 1000);
   
     const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
-    const bestTime = localStorage.getItem('bestTime') || Infinity;
+    const bestTime = localStorage.getItem('bestTime') || 0;
 
     const bestMinutes = Math.floor(bestTime / 60000);
     const bestSeconds = Math.floor((bestTime % 60000) / 1000);
